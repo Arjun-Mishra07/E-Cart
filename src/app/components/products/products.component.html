@@ -1,0 +1,32 @@
+<div class="product">
+    <div class="img">
+        <a><img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"></a>
+        <p>Cloths</p>
+    </div>
+    <div class="img">
+        <a><img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"></a>
+        <p>Laptop</p>
+    </div>
+    <div class="img">
+        <a><img src="https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg"></a>
+        <p>Electronics</p>
+    </div>
+    <div class="img">
+        <a><img src="https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg"></a>
+        <p>Jewelerry</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card">
+                <img class="items" src="{{item.image}}" alt="">
+                <h5 class="items">{{item.title}}</h5>
+                <p class="items">{{item.description}}</p>
+                <p class="items"><strong>price</strong>${{item.price}}</p>
+                <p class="items">{{item.category}}</p>
+                <button (click)="addToCart(item)" class="btn items">Add to card</button>
+            </div>
+        </ng-container>
+    </div>
+</div>

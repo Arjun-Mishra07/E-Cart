@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+img{
+    width: 220px;
+    height: 180px;
+    margin-top: 22px;
+    border: none;
+    outline: none;
+    
+}
+.card{
+    font-size: 32px;
+}
+.center{
+    font-size: 32px;
+}
+.btn{
+   margin-left: 68px;
+   background-color: rgb(198, 190, 216);
+   font-size: 16px;
+   border-radius: 5px;
+}
+.card-table{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+td{
+    padding-inline: 15px;
+}
+th{
+    padding-inline: 20px;
+}
+.delete{
+    margin-left: 25px;
+    margin-top: 85px;
+    background-color: red;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+}

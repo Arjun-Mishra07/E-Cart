@@ -1,0 +1,47 @@
+img{
+    width: 78px;
+    height: 72px;  
+}
+.product{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(202, 224, 224);
+}
+.img{
+    margin: 10px;
+    margin-inline: 40px;
+}
+p{
+    font-size: 18px;
+}
+p:hover{
+    color: blue;
+    font-size: 20px;
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(3,auto)
+}
+.items{
+    margin: 15px;
+    width: 222px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card{
+    border: 0.5px solid rgb(99, 61, 61);
+    margin: 1px;
+}
+.card img{
+    width: 180px;
+    height: 180px;
+}
+.card img:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+.btn{
+    background-color: rgb(95, 95, 133);
+    font-weight: bold;
+}

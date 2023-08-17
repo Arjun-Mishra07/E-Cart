@@ -1,0 +1,36 @@
+.header{
+    display: flex;
+    background-color: blue;
+    color: white;
+}
+.search{
+    margin: 20px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 0px;
+    width: 380px;
+}
+.search-icon{
+    position: relative;
+    top: 26px;
+    right: 47px;
+    color: black;
+    font-size: 20px;
+}
+.btn{
+    display: flex;
+    background-color: blue;
+    color: white;
+    font-size: 28px;
+    border: 0px;
+    margin: 18px;
+    position: absolute;
+    right: 0px;
+}
+.badge-number{
+    margin: 2px;
+    margin-top: 7px;
+    background-color: red;
+    padding: 4px;
+    font-size: 12px;
+}
