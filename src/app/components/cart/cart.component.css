@@ -3,7 +3,6 @@
     justify-content: center;
 }
 img{
-    width: 220px;
     height: 180px;
     margin-top: 22px;
     border: none;
@@ -31,15 +30,10 @@ img{
     justify-content: center;
     align-items: center;
 }
-td{
-    padding-inline: 15px;
-}
-th{
-    padding-inline: 20px;
-}
+
 .delete{
-    margin-left: 25px;
-    margin-top: 85px;
+    margin-left: 12px;
+    margin-top: 89px;
     background-color: red;
     color: white;
     border: 0px;

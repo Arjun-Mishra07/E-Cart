@@ -11,13 +11,10 @@ export class CartapiService {
   
   constructor(private http: HttpClient) { }
   getProduct() {
-    debugger;
     this.productList.next(this.cartDataList);
-
     return this.productList.asObservable();
   }
   setProduct(product: any) {
-    debugger;
 
     this.cartDataList.push(...product);
     this.productList.next(product)
