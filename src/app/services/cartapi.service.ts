@@ -5,14 +5,20 @@ import { BehaviorSubject } from 'rxjs'
   providedIn: 'root'
 })
 export class CartapiService {
-  cartDataList: any = [];
+  cartDataList: any = JSON.parse(localStorage.getItem('ECart') || '[]');
   productList = new BehaviorSubject<any>([]);
-
+  search = new BehaviorSubject<string>("");
+  
   constructor(private http: HttpClient) { }
   getProduct() {
+    debugger;
+    this.productList.next(this.cartDataList);
+
     return this.productList.asObservable();
   }
   setProduct(product: any) {
+    debugger;
+
     this.cartDataList.push(...product);
     this.productList.next(product)
   }
@@ -20,7 +26,9 @@ export class CartapiService {
     this.cartDataList.push(product);
     this.productList.next(this.cartDataList);
     this.getTotalAmount();
-    console.log(this.cartDataList)
+    console.log(this.cartDataList);
+    localStorage.setItem('ECart', JSON.stringify(this.cartDataList))
+
   }
   getTotalAmount():number{
     let grandTotal =0;
@@ -35,10 +43,12 @@ export class CartapiService {
         this.cartDataList.splice(index,1)
       }
      })
+    localStorage.setItem('ECart', JSON.stringify(this.cartDataList))
      this.productList.next(this.cartDataList)
     }   
   removeAllCart(){
-   this.cartDataList =[]
+   this.cartDataList =[];
+   localStorage.setItem('ECart', JSON.stringify(this.cartDataList))
    this.productList.next(this.cartDataList) 
   }
 }
